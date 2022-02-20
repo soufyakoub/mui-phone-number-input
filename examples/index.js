@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Grid from "@material-ui/core/Grid";
+import Grid from "@mui/material/Grid";
 import PhoneInput from "..";
 
 const input_props = [

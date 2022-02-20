@@ -18,12 +18,8 @@
     "dev:examples": "rimraf examples/public && webpack --env NODE_ENV=development -c examples/webpack.config.js",
     "build": "npm run clean && npm run build:dist && npm run build:examples",
     "build:dist": "rimraf dist && rollup -c --environment NODE_ENV:production",
-    "build:examples": "rimraf examples/public && webpack --env NODE_ENV=production -c examples/webpack.config.js"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "build:examples": "rimraf examples/public && webpack --env NODE_ENV=production -c examples/webpack.config.js",
+    "prepare": "husky install"
   },
   "release": {
     "branches": [
@@ -70,46 +66,52 @@
   },
   "homepage": "https://github.com/soufyakoub/mui-phone-textfield#readme",
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/preset-react": "^7.12.7",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@material-ui/core": "^4.11.2",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.4.2",
+    "@mui/styles": "^5.4.2",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "@types/react-window": "^1.8.2",
-    "@wessberg/rollup-plugin-ts": "^1.3.8",
-    "babel-loader": "^8.2.2",
-    "cldr-localenames-full": "^38.0.0",
-    "concurrently": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/react-window": "^1.8.5",
+    "babel-loader": "^8.2.3",
+    "cldr-localenames-full": "^40.0.0",
+    "concurrently": "^7.0.0",
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.0",
-    "husky": "^4.3.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.34.2",
-    "rollup-plugin-external-assets": "^2.0.0",
+    "rollup": "^2.67.3",
+    "rollup-plugin-external-assets": "^3.0.1",
     "rollup-plugin-terser": "^7.0.2",
-    "semantic-release": "^17.3.0",
-    "typescript": "^4.1.3",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "rollup-plugin-ts": "^2.0.4",
+    "semantic-release": "^19.0.2",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "peerDependencies": {
-    "@material-ui/core": ">= 4.x.x",
-    "react": ">= 17.x.x"
+    "@mui/material": "^5.4.2",
+    "@mui/styles": "^5.4.2",
+    "react": "^17.0.2",
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5",
-    "libphonenumber-js": "^1.9.6",
-    "prop-types": "^15.7.2",
+    "@babel/runtime": "^7.17.2",
+    "libphonenumber-js": "^1.9.49",
+    "prop-types": "^15.8.1",
     "react-window": "^1.8.6",
-    "tslib": "^2.0.3"
+    "tslib": "^2.3.1"
   }
 }

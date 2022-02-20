@@ -1,15 +1,15 @@
 import React, { ChangeEvent, useState, MouseEvent, useRef, KeyboardEvent, useEffect, forwardRef } from "react";
 import PropTypes from "prop-types";
-import TextField, { TextFieldProps } from "@material-ui/core/TextField";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Popover from "@material-ui/core/Popover";
-import { makeStyles } from "@material-ui/core/styles";
-import grey from "@material-ui/core/colors/grey";
+import TextField, { TextFieldProps } from "@mui/material/TextField";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Popover from "@mui/material/Popover";
+import { makeStyles } from "@mui/styles";
+import grey from "@mui/material/colors/grey";
 import { AsYouType, PhoneNumber, getCountries, getCountryCallingCode, CountryCode } from "libphonenumber-js";
 import { FixedSizeList, ListChildComponentProps } from "react-window";
 import Flag from "./Flag";
@@ -231,9 +231,11 @@ const PhoneTextField = (props: PhoneTextFieldProps) => {
 
 		<Popover
 			anchorEl={anchorEl}
-			onEntered={handleEntered}
+			TransitionProps={{
+				onEntered: handleEntered,
+				onExited: handleExited,
+			}}
 			open={open}
-			onExited={handleExited}
 			onClose={handleClose}
 			onKeyDown={handleMenuKeyDown}
 		>

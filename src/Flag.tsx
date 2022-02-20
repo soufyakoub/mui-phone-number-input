@@ -1,6 +1,6 @@
 import { CountryCode } from "libphonenumber-js";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/styles";
 import sprite_x1 from "./assets/sprite_x1.png";
 import sprite_x2 from "./assets/sprite_x2.png";
 import jss from "./assets/sprite.jss.json";

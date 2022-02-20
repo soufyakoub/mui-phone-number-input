@@ -38,13 +38,15 @@ module.exports = env => ({
 		})
 	],
 	devServer: {
-		contentBase: path.join(__dirname, 'public'),
+		static: {
+			directory: path.join(__dirname, 'public'),
+			watch: {
+				ignored: /node_modules/,
+			},
+		},
 		port: 3000,
 		liveReload: true,
 		open: true,
-		watchOptions: {
-			ignored: /node_modules/,
-		},
 	},
 	optimization: {
 		runtimeChunk: 'single',

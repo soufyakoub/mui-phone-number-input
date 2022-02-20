@@ -1,6 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import json from "@rollup/plugin-json";
-import ts from "@wessberg/rollup-plugin-ts";
+import ts from "rollup-plugin-ts";
 import externalAssets from "rollup-plugin-external-assets";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";

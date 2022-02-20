@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/soufyakoub/mui-phone-textfield/compare/v3.1.0...v3.1.1) (2022-02-20)
+
+
+### Bug Fixes
+
+* update dependencies ([cc6d3b1](https://github.com/soufyakoub/mui-phone-textfield/commit/cc6d3b112713abd60b0e6ed58c17ea032c1e9734))
+
 # [3.1.0](https://github.com/soufyakoub/mui-phone-textfield/compare/v3.0.0...v3.1.0) (2021-02-15)
 
 

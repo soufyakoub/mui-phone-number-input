@@ -44,7 +44,7 @@ jobs:
       - run: pipenv install
       - run: npm install
       - run: pipenv run python sprite.py
-      - run: npm run build:examples
+      - run: npm run build
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages

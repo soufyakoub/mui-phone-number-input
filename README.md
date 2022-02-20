@@ -15,18 +15,18 @@
 First, make sure you can handle **image** import/require in your bundler of choice.
 For example, here's how to do it in [webpack][19].
 
-Then to install this package:
+Then to install this package and its peerDependencies:
 
 Via [npm][3]
 
 ```sh
-npm install mui-phone-textfield
+npm install mui-phone-textfield react @mui/material @mui/styles @emotion/react @emotion/styled
 ```
 
 Via [yarn][4]
 
 ```sh
-yarn add mui-phone-textfield
+yarn add mui-phone-textfield react @mui/material @mui/styles @emotion/react @emotion/styled
 ```
 
 ## Usage

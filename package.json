@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/soufyakoub/mui-phone-textfield.git"
+    "url": "git+https://github.com/recursive-beast/mui-phone-textfield.git"
   },
   "keywords": [
     "phone",
@@ -39,9 +39,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/soufyakoub/mui-phone-textfield/issues"
+    "url": "https://github.com/recursive-beast/mui-phone-textfield/issues"
   },
-  "homepage": "https://github.com/soufyakoub/mui-phone-textfield#readme",
+  "homepage": "https://github.com/recursive-beast/mui-phone-textfield#readme",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-runtime": "^7.17.0",

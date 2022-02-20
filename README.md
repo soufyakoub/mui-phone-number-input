@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/dt/mui-phone-textfield)](https://www.npmjs.com/package/mui-phone-textfield)
 [![npm](https://img.shields.io/npm/v/mui-phone-textfield)](https://www.npmjs.com/package/mui-phone-textfield)
-[![Build Status](https://travis-ci.com/soufyakoub/mui-phone-textfield.svg?branch=main)](https://travis-ci.com/soufyakoub/mui-phone-textfield)
+[![build](https://github.com/recursive-beast/mui-phone-textfield/actions/workflows/build.yml/badge.svg)](https://github.com/recursive-beast/mui-phone-textfield/actions/workflows/build.yml)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)][18]
 
 # mui-phone-textfield

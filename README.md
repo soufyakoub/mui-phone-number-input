@@ -137,7 +137,7 @@ Please follow the [conventional commits][16] specification, because [semantic-re
 [MIT][18]
 
 [1]: https://media.giphy.com/media/H4YmD0FNarlbRywdpy/giphy.gif
-[2]: https://soufyakoub.github.io/mui-phone-textfield/
+[2]: https://recursive-beast.github.io/mui-phone-textfield/
 [3]: https://npmjs.org/
 [4]: https://yarnpkg.com
 [5]: https://material-ui.com/components/text-fields/

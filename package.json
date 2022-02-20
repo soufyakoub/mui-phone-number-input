@@ -21,29 +21,6 @@
     "build:examples": "rimraf examples/public && webpack --env NODE_ENV=production -c examples/webpack.config.js",
     "prepare": "husky install"
   },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json",
-            "package-lock.json",
-            "CHANGELOG.md"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }
-      ],
-      "@semantic-release/github"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soufyakoub/mui-phone-textfield.git"

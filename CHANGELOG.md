@@ -1,3 +1,16 @@
+# [4.0.0](https://github.com/soufyakoub/mui-phone-textfield/compare/v3.1.1...v4.0.0) (2022-02-20)
+
+
+### Bug Fixes
+
+* bump version to major ([d2845df](https://github.com/soufyakoub/mui-phone-textfield/commit/d2845dfc5044516ef70ed367ce3addd8ab2f5d78))
+
+
+### BREAKING CHANGES
+
+* I mistakenly added an 's' to BREAKING CHANGE in the
+last fix commit.
+
 ## [3.1.1](https://github.com/soufyakoub/mui-phone-textfield/compare/v3.1.0...v3.1.1) (2022-02-20)
 
 

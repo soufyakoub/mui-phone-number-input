@@ -1,48 +1,22 @@
-import resolve from '@rollup/plugin-node-resolve';
-import json from "@rollup/plugin-json";
-import ts from "rollup-plugin-ts";
-import externalAssets from "rollup-plugin-external-assets";
-import { terser } from "rollup-plugin-terser";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import terser from "@rollup/plugin-terser";
+import typescript from "@rollup/plugin-typescript";
 import pkg from "./package.json";
 
-const isProduction = process.env.NODE_ENV === "production";
-const externals = [
-	...Object.keys(pkg.peerDependencies),
-	...Object.keys(pkg.dependencies),
-];
+const external = [
+  ...Object.keys(pkg.peerDependencies),
+  ...Object.keys(pkg.dependencies),
+].map((m) => new RegExp(`^${m}`));
 
-export default {
-	input: "src/index.tsx",
-	output: [
-		isProduction && {
-			dir: "dist",
-			entryFileNames: "cjs/bundle.js",
-			format: 'cjs',
-			exports: "named",
-			sourcemap: true,
-		},
-		{
-			dir: "dist",
-			entryFileNames: "esm/bundle.js",
-			format: 'es',
-			sourcemap: true,
-		}
-	],
-	external: id => new RegExp(externals.join("|")).test(id),
-	plugins: [
-		externalAssets("src/assets/*.png"),
-		resolve({
-			extensions: ['.ts', '.tsx', '.js', '.json'],
-		}),
-		json(),
-		ts({
-			transpiler: "babel",
-			exclude: "node_modules/**/*",
-			tsconfig: resolvedConfig => ({ ...resolvedConfig, declaration: isProduction }),
-		}),
-		isProduction && terser(),
-	],
-	watch: {
-		exclude: /node_modules/,
-	},
-};
+export default [
+  {
+    input: "src/index.tsx",
+    output: [
+      { file: pkg.main, format: "cjs", sourcemap: true },
+      { file: pkg.module, format: "esm", sourcemap: true },
+    ],
+    plugins: [resolve(), commonjs(), typescript(), terser()],
+    external,
+  },
+];

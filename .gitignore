@@ -1,5 +1,5 @@
 .vscode
-src/assets
+src/data.ts
 node_modules
 examples/public/bundle.js
 dist

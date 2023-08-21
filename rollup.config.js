@@ -13,8 +13,8 @@ export default [
   {
     input: "src/index.tsx",
     output: [
-      { file: pkg.main, format: "cjs", sourcemap: true },
-      { file: pkg.module, format: "esm", sourcemap: true },
+      { file: pkg.main, format: "cjs", sourcemap: true, exports: "named" },
+      { file: pkg.module, format: "esm", sourcemap: true, exports: "named" },
     ],
     plugins: [resolve(), commonjs(), typescript(), terser()],
     external,

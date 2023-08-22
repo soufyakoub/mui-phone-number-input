@@ -53,24 +53,20 @@ export function PhoneTextField({
     setValue(disableFormatting ? value : formatted);
   };
 
-  const onSelectChange: CountrySelectProps["onChange"] = (e) => {
-    const country = e.target.value as CountryCode;
-
-    onCountryChange?.(country);
-    update(value, country);
-  };
-
   return (
     <TextField
       InputProps={{
-        startAdornment: (country && !hideSelect) && (
+        startAdornment: country && !hideSelect && (
           <StyledCountrySelect
             variant="outlined"
             size={rest.size}
             hideCallingCode
             hideCountryName
             value={country}
-            onChange={onSelectChange}
+            onCountryChange={(country) => {
+              onCountryChange?.(country);
+              update(value, country);
+            }}
           />
         ),
       }}

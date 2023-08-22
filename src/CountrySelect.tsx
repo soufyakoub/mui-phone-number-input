@@ -13,12 +13,14 @@ export interface CountrySelectProps
   hideCallingCode?: boolean;
   hideCountryName?: boolean;
   placeholder?: ReactNode;
+  onCountryChange?: (country: CountryCode) => void;
 }
 
 export function CountrySelect({
   hideCallingCode,
   hideCountryName,
   placeholder,
+  onCountryChange,
   ...rest
 }: CountrySelectProps) {
   return (
@@ -38,6 +40,7 @@ export function CountrySelect({
           </Stack>
         );
       }}
+      onChange={(e) => onCountryChange?.(e.target.value as CountryCode)}
       {...rest}
     >
       {countryCodes.map((code) => {
@@ -59,4 +62,5 @@ CountrySelect.propTypes = {
   hideCallingCode: PropTypes.bool,
   hideCountryName: PropTypes.bool,
   placeholder: PropTypes.node,
+  onCountryChange: PropTypes.func,
 };

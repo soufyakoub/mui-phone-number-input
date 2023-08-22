@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import TextField, { TextFieldProps } from "@mui/material/TextField";
 import { AsYouType, parseIncompletePhoneNumber } from "libphonenumber-js";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
-import { CountrySelect, CountrySelectProps } from "./CountrySelect";
+import React, { useEffect, useState } from "react";
+import { CountrySelect } from "./CountrySelect";
 import { CountryCode, countryCodes } from "./countries";
 
 export type PhoneTextFieldProps = TextFieldProps & {
@@ -53,6 +53,10 @@ export function PhoneTextField({
     setValue(disableFormatting ? value : formatted);
   };
 
+  useEffect(() => {
+    update(value, country);
+  }, [country]);
+
   return (
     <TextField
       InputProps={{
@@ -63,10 +67,7 @@ export function PhoneTextField({
             hideCallingCode
             hideCountryName
             value={country}
-            onCountryChange={(country) => {
-              onCountryChange?.(country);
-              update(value, country);
-            }}
+            onCountryChange={onCountryChange}
           />
         ),
       }}

@@ -11,7 +11,7 @@
 To install this package via [npm](https://npmjs.org):
 
 ```sh
-npm install mui-phone-textfield
+npm i mui-phone-textfield
 ```
 
 And its peer dependencies:
@@ -113,7 +113,7 @@ In addtion to [Select](https://mui.com/material-ui/react-select)'s props, The `C
 After cloning this repo, ensure dependencies are installed by running:
 
 ```sh
-npm install
+npm i
 ```
 
 To build the final bundle:

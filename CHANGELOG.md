@@ -1,3 +1,29 @@
+# [5.0.0](https://github.com/recursive-beast/mui-phone-textfield/compare/v4.0.0...v5.0.0) (2023-08-23)
+
+
+### Bug Fixes
+
+* update state on country change ([266b5e9](https://github.com/recursive-beast/mui-phone-textfield/commit/266b5e95315ad0d31fda051ba7a09c66f800f478))
+
+
+### Features
+
+* add CountrySelect component ([2df22e1](https://github.com/recursive-beast/mui-phone-textfield/commit/2df22e1fe5670f8795d43b4097d7d2691e6a17ad))
+* provide convenient event listeners instead of onChange ([eee54b4](https://github.com/recursive-beast/mui-phone-textfield/commit/eee54b475d634ddec5a9047bb1bf54c02427d01e))
+* simplify component props ([49390c7](https://github.com/recursive-beast/mui-phone-textfield/commit/49390c7ec447a7f25c855488516fdd878fa85e4b))
+
+
+### BREAKING CHANGES
+
+* package has been rewritten
+* simplified event listeners
+* value state is now controlled from inside the component
+* no need to configure bundler for image imports anymore
+* the select component is hidden if no country is
+provided
+* a select is used instead of a button that opens a menu,
+this results in better accessibility
+
 # [5.0.0-pre-release.1](https://github.com/recursive-beast/mui-phone-textfield/compare/v4.0.0...v5.0.0-pre-release.1) (2023-08-23)
 
 

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - pre-release
 
 env:
   HUSKY: 0

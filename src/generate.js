@@ -6,7 +6,11 @@ axios
   .get("https://flagcdn.com/en/codes.json")
   .then(({ data }) => {
     const obj = {};
-    for (let [key, value] of Object.entries(data)) {
+    const entries = Object.entries(data);
+
+    entries.sort((a, b) => a[1].localeCompare(b[1]));
+
+    for (let [key, value] of entries) {
       key = key.toUpperCase();
       if (isSupportedCountry(key)) obj[key] = value;
     }

@@ -1,3 +1,16 @@
+# [5.1.0](https://github.com/recursive-beast/mui-phone-textfield/compare/v5.0.0...v5.1.0) (2024-02-06)
+
+
+### Bug Fixes
+
+* style conflict with tailwindCss ([88e3eb1](https://github.com/recursive-beast/mui-phone-textfield/commit/88e3eb1452d4d45f9b2fc56c22c9d629a4abb37e))
+
+
+### Features
+
+* sort countries by name ([4464c9d](https://github.com/recursive-beast/mui-phone-textfield/commit/4464c9d71a81fc775ab15f2bf9158eca7af0f69d))
+* update dependencies ([9a60c72](https://github.com/recursive-beast/mui-phone-textfield/commit/9a60c72c1cd9c413581d5baf607aa370844576ea))
+
 # [5.0.0](https://github.com/recursive-beast/mui-phone-textfield/compare/v4.0.0...v5.0.0) (2023-08-23)
 
 

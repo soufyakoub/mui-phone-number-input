@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectProps } from "@mui/material/Select";
 import Stack from "@mui/material/Stack";
@@ -30,7 +31,9 @@ export function CountrySelect({
 
         return (
           <Stack direction="row" alignItems="center">
-            <Flag country={value} />
+            <Box width={30}>
+              <Flag country={value} />
+            </Box>
             {!hideCountryName && <Typography ml={1}>{data[value]}</Typography>}
             {!hideCallingCode && (
               <Typography ml={1} color="gray">

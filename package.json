@@ -39,7 +39,7 @@
   "homepage": "https://github.com/recursive-beast/mui-phone-textfield#readme",
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
-    "@commitlint/config-conventional": "^18.6.0",
+    "@commitlint/config-conventional": "^19.0.3",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.7",
